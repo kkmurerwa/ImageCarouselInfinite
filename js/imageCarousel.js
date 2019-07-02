@@ -4,6 +4,34 @@ let scroll = document.getElementById("infinitelyLong");
 var slides = document.getElementsByClassName("slideItem");
 var images = document.getElementsByClassName("slideImage");
 
+function directionDeterminer(n) {
+    let activePosition;
+    n -= 1;
+    for (let i = 0; i < slides.length; i++) {
+        if (slides[i].classList == "slideItem second-div") {
+            // alert("Found him : " + i);
+            activePosition = i;
+            break;
+        }
+    }
+    if (activePosition > n) {
+        // plusSlides(-1);
+        if (n == 0 && activePosition == 5) {
+            plusSlides(1);
+        } else {
+            plusSlides(-1);
+        }
+        //
+    } else if (activePosition < n) {
+        if (n == 5 && activePosition == 0) {
+            plusSlides(-1);
+        } else {
+            plusSlides(1);
+        }
+
+    }
+}
+
 function plusSlides(n) {
     previousIndex = slideIndex;
     showSlides(slideIndex += n);
