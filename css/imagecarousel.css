@@ -4,28 +4,22 @@ body {
 }
 
 .slideshowContainer {
-    /* background: green; */
     width: 100%;
     height: 100vh;
-    /* overflow: hidden; */
 }
 
 .infinitelyLong {
     width: 100%;
     height: 40vh;
-    /* margin: 30px auto; */
-    /* background: red; */
     z-index: 1;
     position: relative;
     transition: all 0.5s ease-out;
-    /* left: 460px; */
 }
 
 .slideItem {
     margin: 20px 0;
     width: 430px;
     height: 50vh;
-    /* display: inline-block; */
     display: none;
     align-items: center;
 }
@@ -33,7 +27,6 @@ body {
 .slideImage {
     width: 430px;
     height: 40vh;
-    /* border-radius: 5px; */
 }
 
 .second-div .slideImage {
@@ -71,7 +64,6 @@ body {
     display: inline-block;
     opacity: .7;
     padding-top: 3vh;
-    /* transition: all 0.5s ease-out; */
 }
 
 .second-div {
@@ -79,7 +71,6 @@ body {
     left: 34.1%;
     height: 44vh;
     display: inline-block;
-    /* padding-top: 2vh; */
     box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.6);
     border: 5px solid green;
     z-index: 9;
@@ -93,7 +84,6 @@ body {
     height: 40vh;
     display: inline-block;
     opacity: .7;
-    /* transition: all 0.5s ease-out; */
 }
 
 .numbertext {
