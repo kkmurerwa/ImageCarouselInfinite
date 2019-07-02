@@ -6,6 +6,7 @@ body {
 .slideshowContainer {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .infinitelyLong {
@@ -25,8 +26,9 @@ body {
 }
 
 .slideImage {
-    width: 430px;
+    width: 100%;
     height: 40vh;
+    border-radius: 2.5px;
 }
 
 .second-div .slideImage {
@@ -44,8 +46,8 @@ body {
     width: 25px;
     padding: 10px;
     margin-left: 10px;
-    background: gray;
-    color: black;
+    background: black;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     border-radius: 0 3px 3px 0;
@@ -59,31 +61,37 @@ body {
 
 .first-div {
     position: absolute;
-    left: 1%;
+    left: -6%;
     height: 40vh;
     display: inline-block;
     opacity: .7;
     padding-top: 3vh;
+    filter: grayscale();
+    transition: all 0.5s ease;
 }
 
 .second-div {
     position: absolute;
-    left: 34.1%;
+    left: 28.1%;
     height: 44vh;
+    width: 42%;
     display: inline-block;
     box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.6);
     border: 5px solid green;
     z-index: 9;
     transition: all 0.5s ease;
+    border-radius: 7px;
 }
 
 .third-div {
     position: absolute;
     padding-top: 3vh;
-    left: 67.5%;
+    left: 73.5%;
     height: 40vh;
     display: inline-block;
     opacity: .7;
+    transition: all 0.5s ease;
+    filter: grayscale();
 }
 
 .numbertext {
