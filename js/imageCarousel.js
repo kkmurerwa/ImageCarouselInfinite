@@ -1,27 +1,25 @@
-var slideIndex = -1;
-var previousIndex;
-let scroll = document.getElementById("infinitelyLong");
+var slideIndex = -1; //Helps monitor location of navigation
+var previousIndex; //Monitors previous active item
 var slides = document.getElementsByClassName("slideItem");
 var images = document.getElementsByClassName("slideImage");
 
+
+//Determine direction to scroll when an image is clicked
 function directionDeterminer(n) {
     let activePosition;
     n -= 1;
     for (let i = 0; i < slides.length; i++) {
         if (slides[i].classList == "slideItem second-div") {
-            // alert("Found him : " + i);
             activePosition = i;
             break;
         }
     }
     if (activePosition > n) {
-        // plusSlides(-1);
         if (n == 0 && activePosition == 5) {
             plusSlides(1);
         } else {
             plusSlides(-1);
         }
-        //
     } else if (activePosition < n) {
         if (n == 5 && activePosition == 0) {
             plusSlides(-1);
@@ -32,13 +30,15 @@ function directionDeterminer(n) {
     }
 }
 
+//Is called when scroll is required by any function, button or object
 function plusSlides(n) {
     previousIndex = slideIndex;
     showSlides(slideIndex += n);
 }
 
-function showSlides(n) {
 
+//Determines if slides are descending or ascending in value and calls relevant methods
+function showSlides(n) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("first-div");
         slides[i].classList.remove("second-div");
@@ -51,6 +51,8 @@ function showSlides(n) {
     }
 }
 
+
+//Helps in scrolling up
 function ascending(slides) {
     if (slideIndex >= 0 && slideIndex <= 3) {
         slides[slideIndex].classList.add("first-div");
@@ -72,6 +74,9 @@ function ascending(slides) {
     }
 }
 
+
+
+//Helps in scrolling down
 function descending(slides) {
     if (slideIndex >= 0 && slideIndex <= 3) {
         slides[slideIndex].classList.add("first-div");
